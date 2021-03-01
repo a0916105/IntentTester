@@ -19,7 +19,13 @@ class MainActivity : AppCompatActivity() {
             Log.d("DEBUG", "null")
         }*/
         //28-2_ACTION_DIAL
-        val dial = Intent(Intent.ACTION_DIAL)
-        startActivity(dial)
+        /*val dial = Intent(Intent.ACTION_DIAL)
+        startActivity(dial)*/
+        //28-3_Broadcast
+        Intent().apply {
+            setAction("tw.idv.jew.CHAT_INCOMING")
+        }.also {
+            sendBroadcast(it)
+        }
     }
 }

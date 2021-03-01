@@ -9,13 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentTester">
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <!-- Android 8以後無法使用Broadcast靜態註冊 -->
+            <intent-filter>
+                <action android:name="tw.idv.jew.CHAT_INCOMING"></action>
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".DialerActivity">
             <intent-filter>
-                <action android:name="tw.idv.jew.ACTION_A"></action>
-                <action android:name="android.intent.action.DIAL"></action>
-                <action android:name="android.intent.action.CALL"></action>
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="tw.idv.jew.ACTION_A" />
+                <action android:name="android.intent.action.DIAL" />
+                <action android:name="android.intent.action.CALL" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
