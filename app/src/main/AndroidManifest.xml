@@ -14,9 +14,9 @@
             android:enabled="true"
             android:exported="true">
             <!-- Android 8以後無法使用Broadcast靜態註冊 -->
-            <intent-filter>
+<!--            <intent-filter>
                 <action android:name="tw.idv.jew.CHAT_INCOMING"></action>
-            </intent-filter>
+            </intent-filter>-->
         </receiver>
 
         <activity android:name=".DialerActivity">
