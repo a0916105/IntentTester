@@ -12,6 +12,9 @@
         <activity android:name=".DialerActivity">
             <intent-filter>
                 <action android:name="tw.idv.jew.ACTION_A"></action>
+                <action android:name="android.intent.action.DIAL"></action>
+                <action android:name="android.intent.action.CALL"></action>
+                <action android:name="android.intent.action.VIEW"></action>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

@@ -10,12 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = Intent()
+        //28-2_ACTION_A
+        /*val intent = Intent()
         intent.setAction("tw.idv.jew.ACTION_A")
         if (intent.resolveActivity(getPackageManager()) != null){
             startActivity(intent)
         }else{
             Log.d("DEBUG", "null")
-        }
+        }*/
+        //28-2_ACTION_DIAL
+        val dial = Intent(Intent.ACTION_DIAL)
+        startActivity(dial)
     }
 }
